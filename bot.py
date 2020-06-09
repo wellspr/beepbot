@@ -1,16 +1,17 @@
 # Bot greetings
 
-def greeting():
-    print("Hi! I am Beebot, your personal bot.")
-
 # Functions list
 functions = [
-    "Simple Calculator",
-    "Number of Seconds",
-    "Statistics",
-    "Create a List",
-    "Play Games"
-    ]
+"Simple Calculator",
+"Number of Seconds",
+"Statistics",
+"Create a List",
+"Play Games",
+"Random Haiku"
+]
+
+def greeting():
+    print("Hi! I am Beebot, your personal bot.")
 
 # Open calculator
 def calculator():
@@ -121,6 +122,16 @@ def games():
 # -->
 # Create new games
 
+
+# Get and Print a Haiku on the Screen
+def haiku():
+    import haiku
+    new_haiku = "1"
+    while new_haiku == "1":
+        haiku.display_random_haiku()
+        new_haiku = input("1 - New Random Haiku | 2 - Exit > ")
+
+
 # Select something to do
 def do_something(option):
     # Calculator
@@ -144,12 +155,15 @@ def do_something(option):
     elif option == "5":
         games()
 
+    # Haiku
+    elif option == "6":
+        haiku()
 
 def run():
     import bot_images
 
     # Say Hello, presents itself and show options
-    instructions = ["Is there something I can help?", "1 - Continue | 2 - Quit"]
+    instructions = ["What can I do for you?", "1 - See options", "2 - Quit"]
     bot_images.say(instructions)
 
     active = input("Type your option here: > ")
