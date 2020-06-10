@@ -1,3 +1,4 @@
+# https://examples.yourdictionary.com/examples-of-haiku-poems.html
 def haiku_info(info):
 
     intro_to_haiku = [
@@ -176,7 +177,7 @@ def haiku_info(info):
                     "Faint sounds of a flute."
                 ],
 
-                [ "- Richard Wright" ]
+                [ "Richard Wright" ]
             ],
 
             [
@@ -186,7 +187,7 @@ def haiku_info(info):
                     "out of itself"
                 ],
 
-                [ "- Nick Virgilio" ]
+                [ "Nick Virgilio" ]
             ],
 
             [
@@ -196,7 +197,7 @@ def haiku_info(info):
                     "on the garden fence"
                 ],
 
-                [ "- Don Eulert" ]
+                [ "Don Eulert" ]
             ],
 
             [
@@ -206,7 +207,7 @@ def haiku_info(info):
                     "Too cold."
                 ],
 
-                [ "- Jack Kerouac" ]
+                [ "Jack Kerouac" ]
             ],
 
             [
@@ -216,7 +217,7 @@ def haiku_info(info):
                     "blowing on the line."
                 ],
 
-                [ "- Alexis Rotella" ]
+                [ "Alexis Rotella" ]
             ],
 
             [
@@ -226,7 +227,7 @@ def haiku_info(info):
                     "Ridge spills upward."
                 ],
 
-                [ "- Robert Yehling" ]
+                [ "Robert Yehling" ]
             ],
 
             [
@@ -236,7 +237,7 @@ def haiku_info(info):
                     "wets our sandals"
                 ],
 
-                [ "- Michael Dylan Welch" ]
+                [ "Michael Dylan Welch" ]
             ]
         ]
     }
@@ -276,12 +277,9 @@ def display_haiku(haiku):
 def display_haiku_author(author):
     if type(author) == str:
         print("     - " + author)
-    else:
-        for line in author:
-            print("     " + line)
     print("")
 
-def display_haiku_and_author(haiku, author):
+def display_haiku_and_author(haiku,author):
     display_haiku(haiku)
     display_haiku_author(author)
 
@@ -321,7 +319,7 @@ def get_modern_haiku():
     modern_haikus = modern_haiku_source.get("haikus")
     modern_haiku_index = random_index(len(modern_haikus))
     modern_haiku = modern_haikus[modern_haiku_index][0]
-    modern_haiku_author = modern_haikus[modern_haiku_index][1]
+    modern_haiku_author = modern_haikus[modern_haiku_index][1][0]
     return [modern_haiku,modern_haiku_author]
 
 def display_classic_haiku():

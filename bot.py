@@ -13,6 +13,14 @@ functions = [
 def greeting():
     print("Hi! I am Beebot, your personal bot.")
 
+def display_options_list(list):
+    print("")
+    count = 0
+    for item in list:
+        count+=1
+        print("   " + str(count) + " : " + str(item))
+    print("")
+
 # Open calculator
 def calculator():
     import math_operations
@@ -21,7 +29,7 @@ def calculator():
     operations = ["Add", "Subtract", "Multiply", "Divide", "Remainder"]
 
     # List all operations to user
-    display_list(operations)
+    display_options_list(operations)
 
     # Record user's choice
     operation = input("Choose an operation: ")
@@ -30,23 +38,27 @@ def calculator():
     while operation != "q":
 
         if operation == "1":
-            print("Addition - Please inform two numbers...")
+            print("    Addition - Please inform two numbers...")
             math_operations.execute("addition")
 
         elif operation == "2":
-            print("Subtraction - Please inform two numbers... ")
+            print("")
+            print("    Subtraction - Please inform two numbers... ")
             math_operations.execute("subtraction")
 
         elif operation == "3":
-            print("Multiplication - Please inform two numbers...")
-            math_operations.execute("product")
+            print("")
+            print("    Multiplication - Please inform two numbers...")
+            math_operations.execute("multiplication")
 
         elif operation == "4":
-            print("Division - Please inform two numbers...")
+            print("")
+            print("    Division - Please inform two numbers...")
             math_operations.execute("division")
 
         elif operation == "5":
-            print("Remainder - Please inform two numbers...")
+            print("")
+            print("    Remainder - Please inform two numbers...")
             math_operations.execute("remainder")
 
         operation = input("New operation 1 - Add | 2 - Subtract | 3 - Multiply | 4 - Divide | 5 - Remainder | q - Quit Calculator > ")
@@ -171,7 +183,7 @@ def run():
     while active == "1":
 
         # List functionalities to user
-        display_list(functions)
+        display_options_list(functions)
 
         # Record option from user
         option = input("Choose a function from the list: > ")

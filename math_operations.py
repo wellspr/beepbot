@@ -14,8 +14,8 @@ def mod(a, b):
     return a % b
 
 def get_input():
-    input1 = input("Please inform the first number... > ")
-    input2 = input("...now the second number please... > ")
+    input1 = input("    First number... > ")
+    input2 = input("    Second number... > ")
     number1 = int(input1)
     number2 = int(input2)
     return [number1, number2]
@@ -41,7 +41,9 @@ def execute(operation):
     output_result = str(result[0])
     output_symbol = result[1]
 
-    print("Result: " + str(numbers[0]) + output_symbol + str(numbers[1]) + " = " + output_result)
+    print("")
+    print("    Result: " + str(numbers[0]) + output_symbol + str(numbers[1]) + " = " + output_result)
+    print("")
 
 def total(n):
     total = 0
